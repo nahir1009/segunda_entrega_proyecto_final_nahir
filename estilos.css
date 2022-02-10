@@ -1,0 +1,395 @@
+/* ============ resets y tipografias ==============   */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", "Chakra Petch", "Oswald", sans-serif;
+}
+
+@font-face {
+  font-family: Tungsten-Bold;
+  src: url("./tipografia/Tungsten-Bold.ttf");
+}
+/* ==================  MOBILE ==================  */
+
+/* ======== Estilos Generales ======== */
+
+/* === pagina index === */
+.card {
+  width: 10rem;
+  margin: 5px;
+}
+.card-title {
+  font-size: 12px;
+}
+.card-text {
+  font-size: 10px;
+}
+.div__ubicacion {
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+}
+
+.div__redes {
+  width: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.div__contactos {
+  width: 400px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.div_principal {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carrusel-img {
+  width: 98%;
+  height: 300px;
+}
+
+#carouselExampleControls {
+  width: 95%;
+}
+.titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  /*box model*/
+  padding: 30px;
+  width: 100%;
+  margin: 5px;
+  /*texto*/
+  font-family: "Chackra Petch";
+  text-align: center;
+  font-size: 25px;
+  text-shadow: #78807d -1px 2px;
+  /*visuales*/
+  color: white;
+  background-color: #8fcaca;
+  border: solid #b6cfb6 4px;
+}
+
+main {
+  background-color: #cce2cb;
+}
+
+header {
+  background-color: #d4f0f0;
+}
+
+footer {
+  /*visuales*/
+  background-color: #b6cfb6;
+  border: solid #c4c2bc 6px;
+}
+.icono-footer {
+  width: 35px;
+}
+.footer__p {
+  font-size: 12px;
+}
+h4 {
+  font-size: 12px;
+}
+
+.section-principal {
+  display: flex;
+  flex-flow: row wrap;
+}
+.card-body {
+  text-align: center;
+  font-size: 14px;
+}
+/* === pagina ropa === */
+aside {
+  background-color: #c6dbc6;
+}
+.div__descuentos {
+  display: flex;
+  flex-flow: row n;
+}
+.descuentos__h2 {
+  /*box model*/
+  height: 60px;
+  width: 100%;
+  padding: 15px;
+  margin: 5px;
+  /*texto*/
+  font-family: "Open Sans";
+  font-size: 20px;
+  text-align: center;
+  text-shadow: -1px 2px #b6cfb6;
+  /*visual*/
+  color: white;
+  background-color: #ff8c94;
+  border: dashed #ef70aa 3px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.descuento__rebaja {
+  width: 100px;
+  /*= Animaciones=*/
+}
+.descuentos__h2 {
+  animation-name: h2;
+  animation-iteration-count: 1;
+  animation-duration: 5s;
+}
+
+@keyframes h2 {
+  from {
+    transform: translate(-500);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0);
+    opacity: 2;
+  }
+  h1 {
+    animation-name: h2;
+    animation-iteration-count: 1;
+    animation-duration: 5s;
+  }
+}
+
+/* ======== Grid Areas Layout ======== */
+/* === pagina index === */
+.body__index {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: 100%;
+}
+.header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+/* === pagina productos === */
+.body__ropa {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "aside"
+    "footer";
+  grid-template-columns: 100%;
+}
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  grid-area: aside;
+}
+footer {
+  grid-area: footer;
+}
+
+/* === pagina index === */
+/* ==================  TABLETS ==================  */
+
+@media (min-width: 480px) and (max-width: 1023px) {
+  /* ======== Estilos Generales ======== */
+
+  /* === pagina index === */
+  .card {
+    width: 16rem;
+    margin: 10px;
+  }
+  .section-principal {
+    justify-content: center;
+  }
+
+  .div__contactos {
+    display: flex;
+    flex-direction: row;
+  }
+  h1 {
+    width: 765px;
+  }
+
+  .div__redes {
+    width: 250px;
+  }
+
+  .descuento__rebaja {
+    height: 100px;
+    width: auto;
+  }
+  /* ======== Estilos Generales ======== */
+  /* === pagina index === */
+  h1 {
+    width: 1350px;
+  }
+  .card {
+    width: 18rem;
+  }
+  .carrusel-img {
+    width: 100%;
+    height: 400px;
+  }
+  /* === pagina productos === */
+  /* ======== Grid Areas Layout ======== */
+  /* === pagina index === */
+  .body__index {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "main main"
+      "footer footer";
+    grid-template-columns: 80% 20%;
+    grid-template-rows: auto auto;
+  }
+  header {
+    grid-area: header;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+  /* === pagina productos === */
+  .body__ropa {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "main aside"
+      "footer footer";
+    grid-template-columns: 80% 20%;
+    grid-template-rows: auto auto auto;
+  }
+  header {
+    grid-area: header;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  aside {
+    grid-area: aside;
+  }
+  footer {
+    grid-area: footer;
+  }
+}
+
+/* ==================  DESKTOP ================== */
+@media (min-width: 1024px) {
+  #carouselExampleControls {
+    width: 90%;
+  }
+  .icono-footer {
+    width: 45px;
+  }
+  .footer__p {
+    font-size: 14px;
+  }
+  h4 {
+    font-size: 15px;
+  }
+  .card-title {
+    font-size: 14px;
+  }
+  .card-text {
+    font-size: 14px;
+  }
+  .card {
+    width: 18rem;
+  }
+
+  /*==pagina productos==*/
+  .descuentos__h2 {
+    width: 600px;
+    height: 80px;
+    font-size: 30px;
+  }
+  .div__descuentos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .div__ropa {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .descuento__rebaja {
+    width: 270px;
+  }
+  /* ======== Grid Areas Layout ======== */
+  .body__index {
+    display: grid;
+    grid-template-areas:
+      " header header header"
+      "main main main"
+      " footer footer footer";
+    grid-template-columns: 5% auto 20%;
+  }
+
+  header {
+    grid-area: header;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+  /*== pagina productos===*/
+  .body__ropa {
+    display: grid;
+    grid-template-areas:
+      " header header header"
+      " main main aside"
+      " footer footer footer";
+    grid-template-columns: 20% auto 20%;
+    grid-template-rows: auto 90% auto;
+  }
+
+  .header {
+    grid-area: header;
+  }
+
+  main {
+    grid-area: main;
+  }
+  aside {
+    grid-area: aside;
+  }
+  footer {
+    grid-area: footer;
+  }
+}
